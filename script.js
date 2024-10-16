@@ -68,3 +68,20 @@ btnHold.addEventListener('click', function () {
     }
   }
 });
+
+btnNew.addEventListener('click', function () {
+  score0.textContent = 0;
+  score1.textContent = 0;
+  current0.textContent = 0;
+  current1.textContent = 0;
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true;
+  diceEl.classList.add('hidden');
+  for (let i = 0; i < scores.length; i++) {
+    scores[i] = 0;
+  }
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--winner');
+});
